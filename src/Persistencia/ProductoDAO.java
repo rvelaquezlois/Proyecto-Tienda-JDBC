@@ -17,7 +17,7 @@ public class ProductoDAO extends DAO{
     public void guardarProducto(Producto producto) throws Exception{
         try {
             if(producto==null){
-                JOptionPane.showMessageDialog(null, "Debe indicar un producto");
+                JOptionPane.showMessageDialog(null, "Debe indicar un producto:");
             }else {
                 String sql = "Insert into producto (codigo, nombre, precio, codigo_fabricante) values ("+producto.getCodigo()+", '"+producto.getNombre()+"', "+producto.getPrecio()+", "+producto.getCodigo_fabricante()+");";
                 insertarModificarEliminar(sql);
